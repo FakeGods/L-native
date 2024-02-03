@@ -3,8 +3,14 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View, TextInput } from 'react-native';
 
 export default function App() {
-  const [name, setName] = useState('shaun');
-  const [age, setAge] = useState('40')
+  const [people, setPeople] = useState([
+    { name:'shaun', key: '1'},
+    { name:'yoshi', key: '2'},
+    { name:'mario', key: '3'},
+    { name:'luigi', key: '4'},
+    { name:'bowser', key: '5'},
+    
+  ]);
 
 
 
@@ -12,19 +18,13 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>Enter name:</Text>
-      <TextInput
-         style={styles.input}
-         placeholder='John Doe'
-         onChangeText={(val) => setName(val)} />
-      <Text>Enter age:</Text>
-      <TextInput
-         style={styles.input}
-         placeholder='25'
-         onChangeText={(val) => setAge(val)} />
-
-      <Text>name: {name}, age: {age}</Text>
-  
+      { poeple.map((item) => {
+        return(
+          <View>
+            <Text>{item.name}</Text>
+          </View>
+        )
+      })}
     </View>
   );
 }
@@ -33,16 +33,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop: 40,
+    paddingHorizontal: 20,
+    //alignItems: 'center',
+    //justifyContent: 'center',
   },
-  input: {
-    borderWidth: 1,
-    borderColor: 777,
-    padding: 8,
-    margin: 10,
-    width: 200,
-  }
+
   
   
 });
