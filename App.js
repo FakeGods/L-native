@@ -22,17 +22,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  header: {
-    backgroundColor: 'pink',
-    padding: 20,
-  },
-  boldText: {
-    fontWeight: 'bold',
-  },
-  body: {
-    backgroundColor: 'yellow',
-    padding: 20,
-    textTransform: 'uppercase'
-  },
+  buttonContainer: {
+    marginTop: 20
+  }
   
 });
