@@ -6,8 +6,9 @@ export default function App() {
   const [name, setName] = useState('shaun');
 
 
-  const pressHandler = () => {
-    setName('Wiktor');
+  const clickHandler = () => {
+    setName('Bo');
+   
   }
 
 
@@ -18,7 +19,7 @@ export default function App() {
       <Text>My name is {name}</Text>
       <Text></Text>
       <View style={styles.buttonContainer}>
-        <Button title='update state' onPress={pressHandler} />
+        <Button title='update state' onPress={clickHandler} />
       </View>
     </View>
   );
