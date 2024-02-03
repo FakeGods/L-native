@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, Text, View, } from 'react-native';
 
 export default function App() {
   const [people, setPeople] = useState([
@@ -18,10 +18,10 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      { poeple.map((item) => {
+      { people.map((item) => {
         return(
           <View key={item.key}>
-            <Text>{item.name}</Text>
+            <Text style={styles.item}>{item.name}</Text>
           </View>
         )
       })}
@@ -38,7 +38,14 @@ const styles = StyleSheet.create({
     //alignItems: 'center',
     //justifyContent: 'center',
   },
+    item: {
+      marginTop: 24,
+      padding: 30,
+      backgroundColor: 'pink',
+      fontSize: 24,
+    }
+  
 
   
   
-});
+  });
