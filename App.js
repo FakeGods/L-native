@@ -20,7 +20,7 @@ export default function App() {
     <View style={styles.container}>
       { poeple.map((item) => {
         return(
-          <View>
+          <View key={item.key}>
             <Text>{item.name}</Text>
           </View>
         )
