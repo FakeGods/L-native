@@ -21,7 +21,7 @@ export default function App() {
       <TextInput
          style={styles.input}
          placeholder='25'
-         onChangeText={(val) => setName(val)} />
+         onChangeText={(val) => setAge(val)} />
 
       <Text>name: {name}, age: {age}</Text>
   
