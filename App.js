@@ -26,13 +26,6 @@ export default function App() {
         )}
       
       />
-      { people.map((item) => {
-        return(
-          <View key={item.key}>
-            <Text style={styles.item}>{item.name}</Text>
-          </View>
-        )
-      })}
     </View>
   );
 }
