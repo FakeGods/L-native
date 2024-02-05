@@ -9,10 +9,17 @@ export default function Header() {
     )
 }
 
-const styles = Style.sheet.create({
+const styles = StyleSheet.create({
     header: {
         height: 80,
         paddingTop: 38,
-        backgroundColor: 'coral',
+        backgroundColor: '#6a9c78',
+        alignContent: 'center'
+    },
+    title: {
+        textAlign: 'center',
+        fontSize: 20,
+        fontWeight: 'bold',
+        textTransform: 'uppercase',
     }
 });
