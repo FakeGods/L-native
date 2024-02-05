@@ -20,6 +20,7 @@ export default function App() {
     
     <View style={styles.container}>
       <FlatList 
+      numColumns={2}
       keyExtractor={(item) => item.id}
         data={people}
         renderItem={({ item }) => (
